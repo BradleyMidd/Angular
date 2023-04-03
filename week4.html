@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="service.js"></script>
+    <link rel="stylesheet" href="service.css">
+</head>
+<body>
+
+<div ng-app="mijnApp" ng-controller="mijnController">
+    <table ng-repeat="records in mijnOpgehaaldeData.records">
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+
+            <td>{{ records.Name }}</td>
+            <td>{{ records.City }}</td>
+            <td>{{ records.Country }}</td>
+
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

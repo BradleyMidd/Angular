@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="week5.2.js"></script>
+</head>
+<body ng-click="clicker()"  ng-app="mijnEventApp" ng-controller="mijnEventController">
+
+<h1>Mouse event</h1>
+
+<div>
+    <div ng-mouseout="mouseout()" ng-dblclick="dblclick()" ng-mouseenter="mouseenter()" ng-mouseover="trackMouse($event)" style="height:300px; width:300px; border:1px dotted;"></div>
+    <p>Coordinaten van de muis {{ x + ', ' + y}}</p>
+
+    <table>
+
+        <tr>
+            <td>Muis in</td>
+            <td>{{muisIn}}</td>
+        </tr>
+
+        <tr>
+            <td>Muis uit</td>
+            <td>{{muisUit}}</td>
+        </tr>
+
+        <tr>
+            <td>Dubbel Kliks</td>
+            <td>{{dbklik}}</td>
+        </tr>
+
+        <tr>
+            <td>Kliks</td>
+            <td>{{klik}}</td>
+        </tr>
+
+        <tr>
+            <td><b>Totaal Events</b></td>
+            <td><b>{{muisIn + muisUit + dbklik + klik}}</b></td>
+        </tr>
+
+    </table>
+</div>
+
+</body>
+</html>
